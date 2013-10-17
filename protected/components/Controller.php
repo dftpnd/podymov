@@ -3,10 +3,10 @@
 class Controller extends SBaseController
 {
 
-    public $layout = 'column1';
+    public $layout = 'main';
     public $menu = array();
     public $breadcrumbs = array();
-    public $my_breadcrumb = '';
+    public $title = '';
 
 
     public function init()
@@ -18,6 +18,7 @@ class Controller extends SBaseController
         $cs->registerScriptFile($this->createUrl('/js/nprogress.js'));
         $cs->registerScriptFile($this->createUrl('/js/fileuploader.js'));
         $cs->registerScriptFile($this->createUrl('/js/main.js'));
+
     }
 
 }

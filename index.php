@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" >
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Подымов</title>
-</head>
-<body>
-    <h1>Сайт находится в разработке</h1>
-    <a href="test_pdf.pdf">Тестовый пдф файл</a>
-</body>
-</html>
+<?php
+ini_set('date.timezone', 'Europe/Moscow');
+$yii = dirname(__FILE__) .'/yii-1.1.14/framework/yii.php';
+$config = dirname(__FILE__) . '/protected/config/main.php';
+// remove the following line when in production mode
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+ini_set('display_errors', 'on');
+ini_set('error_reporting', 'E_ALL');
+ini_set('date.timezone', 'Europe/Moscow');
+ini_set('error_reporting', '-1');
+require_once($yii);
+
+Yii::createWebApplication($config)->run();
+
+
+
+
+

@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'connectionString' => 'mysql:host=localhost;dbname=atpp',
+    'connectionString' => 'mysql:host=localhost;dbname=podymov',
     'emulatePrepare' => true,
     'username' => 'root',
     'password' => '',
