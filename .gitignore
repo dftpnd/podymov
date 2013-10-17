@@ -1,4 +1,4 @@
-protected/config/main.php
+protected/config/db.php
 uploads
 nbproject
 .idea
