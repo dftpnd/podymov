@@ -30,7 +30,10 @@ html, body {
     line-height: 1.231;
     color: #fff;
     min-width: 970px;
-
+}
+.universe{
+    min-height: 100%;
+    background: #bdc3c7;
 }
 
 textarea, input {
@@ -92,13 +95,13 @@ h1, h2, h3 {
 
 /*-----------header-------------*/
 
-input[type='text'], textarea {
+input[type='text'], textarea,  input[type='password']{
     background: #fff;
     color: #757575;
     border-radius: 5px;
 }
 
-input[type='text'] {
+input[type='text'], input[type='password'] {
     height: 44px;
     padding-left: 20px;
 }
@@ -542,12 +545,29 @@ article h2 span {
 
 /*-----------footer--------------*/
 footer {
-    height: 660px;
     background: #b4bbc8;
     position: relative;
     overflow: hidden;
 }
-
+.foter_info{
+    padding-top: 20px;
+    font-size: 22px;
+    line-height: 30px;
+}
+.footer_login{
+    margin-top: 20px;
+    height: 100px;
+    background: #ecf0f1;
+    text-align: center;
+}
+.year_continea{
+    font-style: italic;
+}
+.podgotovlen{
+    float: right;
+    font-size: 16px;
+    line-height: 20px;
+}
 /*------------------------------*/
 .foto {
     width: 187px;
@@ -623,6 +643,7 @@ footer {
     text-align: center;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     vertical-align: middle;
+    position: relative;
 }
 .btn-block {
     display: block;
@@ -693,6 +714,10 @@ footer {
 .btn.btn-success {
     background-color: #2ECC71;
 }
+.btn-primary {
+    background-color: #1ABC9C;
+    color: #FFFFFF;
+}
 .btn.btn-info:hover, .btn.btn-info:focus, .btn-group:focus .btn.btn-info.dropdown-toggle {
     background-color: #5DADE2;
 }
@@ -705,9 +730,24 @@ footer {
 .btn.btn-success:active, .btn-group.open .btn.btn-success.dropdown-toggle, .btn.btn-success.active {
     background-color: #27AD60;
 }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #48C9B0;
+    border-color: #48C9B0;
+    color: #FFFFFF;
+}
+
 .span3 {
     width: 220px;
     float: right;
+}
+.span4{
+    position: relative;
+    top: 30px;
+    display: inline-block;
+}
+.span4 a{
+    padding-left: 55px!important;
+    padding-right: 55px;
 }
 .otstup{
     padding-right: 20px;
@@ -716,4 +756,44 @@ footer {
     padding: 15px 0 0 0;
     margin-top: 15px;
     border-top: 2px dashed #2c3e50;
+}
+.login{
+
+}
+.image_login{
+    position: absolute;
+    top:4px;
+    left:15px;
+}
+.form-signin{
+    width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.login_inp input{
+    width: 100%;
+    padding-left: 0;
+    text-indent: 20px;
+    border:1px solid transparent;
+}
+.error_enter{
+    padding: 10px;
+    color: #fff;
+    background: #2c3e50;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 0;
+    display: none;
+}
+.get_error .login_inp input{
+    border:1px solid #e74c3c!important;
+}
+.get_error .error_enter{
+    display: block;
+}
+.spod{
+    padding: 10px 0;
+}
+.loading{
+    cursor: default!important;
+    background: url(../i/loader_button.gif) #BDC3C7 !important;
 }

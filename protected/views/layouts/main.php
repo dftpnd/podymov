@@ -10,264 +10,71 @@
     <title><?php echo CHtml::encode($this->title); ?></title>
 </head>
 <body>
-<?php // echo $content; ?>
-
-<nav class="main_menu">
-    <ul class="centrator">
-        <li>
-            <a href="#home" onclick="anchorFunction($(this));return false">Главная
-                <span class="icon_home"></span>
-
-                <div></div>
-            </a>
-        </li>
-        <li>
-            <a href="#mission" onclick="anchorFunction($(this));return false">Публикации
-                <span class="icon_mission"></span>
-
-                <div></div>
-            </a>
-        </li>
-        <li>
-            <a href="#contact" onclick="anchorFunction($(this));return false">Контакты
-                <span class="icon_projects"></span>
-
-                <div></div>
-            </a>
-        </li>
-    </ul>
-</nav>
-<section>
-    <article id="home">
-        <div class="article_wrapper">
-            <h2>
-            <span>
-                Никулин Юрий Владимирович
-            </span>
-
-                <div></div>
-            </h2>
-            <div class="centrator">
-                <div class="table table_classic">
-                    <div class="tr">
-                        <div class='td'>
-                            <div class="foto"></div>
-                        </div>
-                        <div class="td">
-                            <div class='text_classic'>
-                                <p>
-                                    Рыба в веб-дизайне — временное наполнение макета
-                                    страницы
-                                    для имитации её законченного вида. У дизайнера не всегда есть под рукой материалы,
-                                    которые
-                                    планируется публиковать на веб-сайте и поэтому нужно использовать что-то иное, чтобы
-                                    показать, как дизайн будет работать в естественных условиях. При этом «рыбное»
-                                    содержимое не
-                                    обязано обладать смыслом — здесь важно визуальное восприятие. «Рыбным» содержимым
-                                    может
-                                    быть
-                                    не только текст, но и изображения (например, иллюстрации к статье, аватары
-                                    пользователей,
-                                    кадры из видео для видеоплеера, баннеры и т. д.).
-                                </p>
-
-                                <p>
-                                    Дизайнер рыбу может придумать
-                                    самостоятельно, а может скопировать с другого аналогичного сайта. В случае с текстом
-                                    можно
-                                    воспользоваться программой-бредогенератором или же вставить классический рыбный
-                                    текст
-                                    «Lorem
-                                    ipsum».
-                                </p>
-
-                                <p>
-                                    На макете дизайна веб-страницы рыба может обладать и информативными функциями.
-                                    Например,
-                                    в
-                                    рыбном тексте дизайнер может показать верстальщику какие следует выставить отступы,
-                                    межстрочный интервал, маркеры списков, цвета различных ссылок и подобное. Эти же
-                                    моменты
-                                    он
-                                    может описать и непосредственно рыбным текстом.
-                                    Рыба может понадобиться не только веб-дизайнеру, но и на последующих этапах создания
-                                    сайта.
-                                    Так как верстальщик получает от дизайнера макет вместе с рыбой, то на выходе у него
-                                    получается свёрстанная страница с рыбным содержимым. В этом случае рыба ещё и
-                                    демонстрирует
-                                    как работает вёрстка в различных веб-браузерах. Далее рыба может применяться
-                                    программистами
-                                    для временного наполнения сайта демонстрационным содержимым на этапе тестирования
-                                    или
-                                    демонстрации функционала заказчику. В связи с этим в некоторые редакторы исходного
-                                    кода
-                                    встраивают бредогенераторы (например, в PSPad).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article id="mission">
-        <div class="article_wrapper">
-            <h2>
-            <span>
-            Публикации
-            </span>
-
-                <div class=""></div>
-            </h2>
-            <div class="article_logo">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                     id="Layer_1" x="0px" y="0px" width="150px" height="150px" fill="#fff" viewBox="0 0 100 100"
-                     enable-background="new 0 0 100 100" xml:space="preserve">
-<rect x="28" y="12" width="28" height="4"/>
-                    <rect x="68" y="84" width="12" height="4"/>
-                    <rect x="28" y="53" width="52" height="4"/>
-                    <rect x="28" y="43" width="52" height="4"/>
-                    <path
-                        d="M82,4V2H62v2H10v94h80V4H82z M66,6h12v20l-6-4.5L66,26V6z M18,94h-4V8h4V94z M86,94H22V8h40v26l10-7.5L82,34V8h4V94z"/>
-</svg>
-            </div>
-            <div class="centrator">
-                <div class="publikation">
-                    <a class="title_link" href="#">Умное название серьезной статьи</a>
-
-                    <div class='text_classic'>
-                        <p>
-                            Здесь краткое описание супер познаавательной статьи. Скорей всего на несколь строчек.
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                        </p>
-                    </div>
-                    <div class="publikation_panel">
-                        <a class="panel_icon pdf_icon" href="#" title="Скачать в .pdf"></a>
-                        <a class="panel_icon doc_icon" href="#" title="Скачать в .doc"></a>
-
-                        <div class="span3">
-                            <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
-                        </div>
-                        <div class="span3 otstup">
-                            <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
-                        </div>
-
-                        <div class="anchor"></div>
-                    </div>
-                </div>
-                <div class="publikation">
-                    <a class="title_link" href="#">Умное название серьезной статьи</a>
-
-                    <div class='text_classic'>
-                        <p>
-                            Здесь краткое описание супер познаавательной статьи. Скорей всего на несколь строчек.
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                        </p>
-                    </div>
-                    <div class="publikation_panel">
-                        <a class="panel_icon pdf_icon" href="#" title="Скачать в .pdf"></a>
-                        <a class="panel_icon doc_icon" href="#" title="Скачать в .doc"></a>
-
-                        <div class="span3">
-                            <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
-                        </div>
-                        <div class="span3 otstup">
-                            <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
-                        </div>
-
-                        <div class="anchor"></div>
-                    </div>
-                </div>
-                <div class="publikation">
-                    <a class="title_link" href="#">Умное название серьезной статьи</a>
-
-                    <div class='text_classic'>
-                        <p>
-                            Здесь краткое описание супер познаавательной статьи. Скорей всего на несколь строчек.
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                        </p>
-                    </div>
-                    <div class="publikation_panel">
-                        <a class="panel_icon pdf_icon" href="#" title="Скачать в .pdf"></a>
-                        <a class="panel_icon doc_icon" href="#" title="Скачать в .doc"></a>
-
-                        <div class="span3">
-                            <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
-                        </div>
-                        <div class="span3 otstup">
-                            <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
-                        </div>
-
-                        <div class="anchor"></div>
-                    </div>
-                </div>
-                <div class="publikation">
-                    <a class="title_link" href="#">Умное название серьезной статьи</a>
-
-                    <div class='text_classic'>
-                        <p>
-                            Здесь краткое описание супер познаавательной статьи. Скорей всего на несколь строчек.
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                            Потому, что одной строко не салидо. На макете дизайна веб-страницы рыба может обладать и
-                            информативными функциями.к
-                        </p>
-                    </div>
-                    <div class="publikation_panel">
-                        <a class="panel_icon pdf_icon" href="#" title="Скачать в .pdf"></a>
-                        <a class="panel_icon doc_icon" href="#" title="Скачать в .doc"></a>
-
-                        <div class="span3">
-                            <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
-                        </div>
-                        <div class="span3 otstup">
-                            <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
-                        </div>
-
-                        <div class="anchor"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </article>
-    <article id="contact">
-        <div class="article_wrapper">
-            <h2>
-            <span>
-                Форма обратной связи
-            </span>
-
-                <div></div>
-            </h2>
-            <form id="apply" class="centrator">
-                <div class='form_description'> Если у вас есть, что мне сказать - заполните форму
-                </div>
-                <div class="form_designing_wrap">
-                    <div class="form_designing">
-                        <input type="text" value="" placeholder="Имя"/>
-                        <input type="text" value="" placeholder="Фамилия"/>
-                        <input type="text" value="" placeholder="E-mail" class="last"/>
-                        <textarea placeholder="Текст сообщения"></textarea>
-                    </div>
-                    <button class="submit">Отправить</button>
-                    <div class="anchor"></div>
-                </div>
-            </form>
-        </div>
-    </article>
-</section>
+<?php echo $content; ?>
 <footer>
+    <a href="#" class="login" title="Вход"></a>
 
+    <div class="foter_info centrator">
+        <div class="table table_classic">
+            <div class="tr">
+                <div class="td">
+                    <span class="year_continea">2013 &mdash; <?php echo date('Y'); ?></span>
+
+                    <div>
+                        &copy; Сайт Подымова В.Н.
+                    </div>
+                </div>
+                <div class="td">
+                    <div class="podgotovlen">
+                        <div>Сайт разработали:</div>
+                        <div style="color: #16a085">Грязнов М.В</div>
+                        <div style="color: #8e44ad">Мукминова А.Р.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_login">
+        <?php if (Yii::app()->user->isGuest): ?>
+            <div class="span4">
+                <a class="btn btn-block btn-lg btn-primary" href="/site/prelogin">
+                    <div class="image_login">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                             id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 100 100"
+                             enable-background="new 0 0 100 100" xml:space="preserve">
+<g>
+    <path fill="#fff"
+          d="M93.645,14.496H34.643c-0.526,0-0.952,0.426-0.952,0.952v10.658c0,0.526,0.425,0.952,0.952,0.952h47.392   v58.432H34.643c-0.526,0-0.952,0.425-0.952,0.95v10.659c0,0.524,0.425,0.952,0.952,0.952h59.001c0.525,0,0.952-0.428,0.952-0.952   V15.447C94.597,14.921,94.17,14.496,93.645,14.496z"/>
+    <path fill="#fff"
+          d="M41.304,77.416c0,0.352,0.194,0.674,0.505,0.84c0.14,0.075,0.293,0.112,0.447,0.112   c0.186,0,0.372-0.056,0.531-0.163L74.23,57.062c0.263-0.177,0.421-0.473,0.421-0.789c0-0.318-0.158-0.614-0.421-0.791   L42.787,34.339c-0.292-0.196-0.668-0.216-0.978-0.05c-0.311,0.166-0.505,0.488-0.505,0.84v12.504H5.522   c-0.526,0-0.951,0.426-0.951,0.952v15.376c0,0.525,0.425,0.95,0.951,0.95h35.781V77.416z"/>
+</g>
+</svg>
+                    </div>
+                    Авторизоваться
+                </a>
+            </div>
+        <?php else: ?>
+            <div class="span4">
+                <a class="btn btn-block btn-lg btn-primary" href="/userAdmin/admin/index">
+                    <div class="image_login">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                             id="Layer_1" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 100 100"
+                             enable-background="new 0 0 100 100" xml:space="preserve">
+<g>
+    <path fill="#fff"
+          d="M93.645,14.496H34.643c-0.526,0-0.952,0.426-0.952,0.952v10.658c0,0.526,0.425,0.952,0.952,0.952h47.392   v58.432H34.643c-0.526,0-0.952,0.425-0.952,0.95v10.659c0,0.524,0.425,0.952,0.952,0.952h59.001c0.525,0,0.952-0.428,0.952-0.952   V15.447C94.597,14.921,94.17,14.496,93.645,14.496z"/>
+    <path fill="#fff"
+          d="M41.304,77.416c0,0.352,0.194,0.674,0.505,0.84c0.14,0.075,0.293,0.112,0.447,0.112   c0.186,0,0.372-0.056,0.531-0.163L74.23,57.062c0.263-0.177,0.421-0.473,0.421-0.789c0-0.318-0.158-0.614-0.421-0.791   L42.787,34.339c-0.292-0.196-0.668-0.216-0.978-0.05c-0.311,0.166-0.505,0.488-0.505,0.84v12.504H5.522   c-0.526,0-0.951,0.426-0.951,0.952v15.376c0,0.525,0.425,0.95,0.951,0.95h35.781V77.416z"/>
+</g>
+</svg>
+                    </div>
+                    Панель администратора
+                </a>
+            </div>
+        <?php endif; ?>
+
+    </div>
 </footer>
+
 </body>
 </html>
