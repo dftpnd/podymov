@@ -14,9 +14,9 @@ class Controller extends SBaseController
         $cs = Yii::app()->clientScript;
         $cs->registerCoreScript('jquery');
         $cs->registerCoreScript('jquery.ui');
-        $cs->registerScriptFile($this->createUrl('/js/jquery.scrollTo.min.js'));
-        $cs->registerScriptFile($this->createUrl('/js/nprogress.js'));
-        $cs->registerScriptFile($this->createUrl('/js/fileuploader.js'));
+
+
+//        $cs->registerScriptFile($this->createUrl('/js/fileuploader.js'));
         $cs->registerScriptFile($this->createUrl('/js/plugin.min.js'));
         $cs->registerScriptFile($this->createUrl('/js/main.js'));
 
