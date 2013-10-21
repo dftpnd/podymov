@@ -1,10 +1,12 @@
 <?php
 
 $this->widget('zii.widgets.CMenu', array(
-    'htmlOptions' => array('class' => 'top-nav logged_out fsdg'),
+    'htmlOptions' => array('class' => 'nav nav-justified'),
     'items' => array(
-        array('label' => 'Главная', 'url' => Yii::app()->urlManager->createUrl('site/index'), 'active' => (Yii::app()->controller->getId() == 'site' && Yii::app()->controller->getAction()->getId() == 'index')),
-        array('label' => 'Выход (' . Yii::app()->user->name . ')', 'url' => Yii::app()->urlManager->createUrl('site/logout'), 'visible' => !Yii::app()->user->isGuest)
+        array('label' => 'Инструкции', 'url' => Yii::app()->urlManager->createUrl('/userAdmin/admin/index'), 'active' => (Yii::app()->controller->getId() == 'admin' && Yii::app()->controller->getAction()->getId() == 'index')),
+        array('label' => 'Публикации', 'url' => Yii::app()->urlManager->createUrl('/userAdmin/admin/post'), 'active' => (Yii::app()->controller->getId() == 'admin' && Yii::app()->controller->getAction()->getId() == 'post')),
+        array('label' => 'Настройки', 'url' => Yii::app()->urlManager->createUrl('/userAdmin/admin/user'), 'active' => (Yii::app()->controller->getId() == 'admin' && Yii::app()->controller->getAction()->getId() == 'user')),
+        array('label' => 'Выход', 'url' => Yii::app()->urlManager->createUrl('site/logout'), 'visible' => !Yii::app()->user->isGuest)
     ),));
 ?>
 

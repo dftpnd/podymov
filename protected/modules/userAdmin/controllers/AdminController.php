@@ -18,5 +18,14 @@ class AdminController extends Controller
     {
         $this->render('index');
     }
+    public function actionPost()
+    {
+        $this->render('post');
+    }
+
+    public function actionUser()
+    {
+        $this->render('user');
+    }
 
 }

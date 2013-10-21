@@ -1,21 +1,30 @@
-<!DOCTYPE html >
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="language" content="en"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css"/>
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/admin.js"></script>
-
-    <title>Панель администрирования</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Панель управления сайтом</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/admin.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="menu">
-    <?php $this->renderPartial('application.modules.userAdmin.views.layouts._menu', array('current_item' => 'about')) ?>
-</div>
-<div class="content">
+
+<div class="container">
+    <a class="return_maine_page" title="Вернуться на главную" href="/site/index">Вернуться на главную</a>
+
+    <div class="masthead">
+        <h3 class="text-muted">Панель управления сайтом</h3>
+        <?php $this->renderPartial('application.modules.userAdmin.views.layouts._menu') ?>
+
+    </div>
+
+
     <?php echo $content; ?>
+
+    <button class="btn btn-lg btn-success" type="button">Нажми на меня</button>
 </div>
 </body>
 </html>
-
-
