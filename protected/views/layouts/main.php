@@ -25,11 +25,7 @@
                     </div>
                 </div>
                 <div class="td">
-                    <div class="podgotovlen">
-                        <div>Сайт разработали:</div>
-                        <div style="color: #16a085">Грязнов М.В</div>
-                        <div style="color: #8e44ad">Мукминова А.Р.</div>
-                    </div>
+
                 </div>
             </div>
         </div>
