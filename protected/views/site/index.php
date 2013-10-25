@@ -105,16 +105,7 @@
         </h2>
 
         <div class="article_logo">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                 id="Layer_1" x="0px" y="0px" width="150px" height="150px" fill="#fff" viewBox="0 0 100 100"
-                 enable-background="new 0 0 100 100" xml:space="preserve">
-<rect x="28" y="12" width="28" height="4"/>
-                <rect x="68" y="84" width="12" height="4"/>
-                <rect x="28" y="53" width="52" height="4"/>
-                <rect x="28" y="43" width="52" height="4"/>
-                <path
-                    d="M82,4V2H62v2H10v94h80V4H82z M66,6h12v20l-6-4.5L66,26V6z M18,94h-4V8h4V94z M86,94H22V8h40v26l10-7.5L82,34V8h4V94z"/>
-</svg>
+            <span class="icon-publish"></span>
         </div>
         <div class="centrator">
             <div class="publikation">
@@ -239,18 +230,7 @@
             <div></div>
         </h2>
         <div class="article_logo">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                 id="Layer_1"
-                 x="0px" y="0px" width="150px" height="150px" fill="#fff" viewBox="0 0 100 100"
-                 enable-background="new 0 0 100 100"
-                 xml:space="preserve">
-<g id="Captions">
-</g>
-                <g id="Your_Icon">
-                    <path
-                        d="M82.5,12.5h-65c-5.522,0-10,4.477-10,10v35c0,5.521,4.478,10,10,10h5v17.499c0,0.64,0.244,1.278,0.735,1.769   c0.977,0.977,2.559,0.978,3.535,0L47.5,67.5h35c5.521,0,10-4.479,10-10.001V22.5C92.5,16.977,88.021,12.5,82.5,12.5z M25,27.5h40   c1.382,0,2.5,1.118,2.5,2.5s-1.118,2.5-2.5,2.5H25c-1.382,0-2.5-1.118-2.5-2.5S23.618,27.5,25,27.5z M45,52.5H25   c-1.382,0-2.5-1.118-2.5-2.5s1.118-2.5,2.5-2.5h20c1.382,0,2.5,1.118,2.5,2.5S46.382,52.5,45,52.5z M75,42.5H25   c-1.382,0-2.5-1.118-2.5-2.5s1.118-2.5,2.5-2.5h50c1.382,0,2.5,1.118,2.5,2.5S76.382,42.5,75,42.5z"/>
-                </g>
-</svg>
+            <span class="icon-contact"></span>
         </div>
         <form id="apply" class="centrator">
             <div class='form_description'> Если у вас есть, что мне сказать - заполните форму
