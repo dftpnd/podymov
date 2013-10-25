@@ -138,7 +138,8 @@
                         <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
                     </div>
                     <div class="span3 otstup">
-                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
+                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в
+                            .pdf</a>
                     </div>
 
                     <div class="anchor"></div>
@@ -164,7 +165,8 @@
                         <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
                     </div>
                     <div class="span3 otstup">
-                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
+                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в
+                            .pdf</a>
                     </div>
 
                     <div class="anchor"></div>
@@ -190,7 +192,8 @@
                         <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
                     </div>
                     <div class="span3 otstup">
-                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
+                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в
+                            .pdf</a>
                     </div>
 
                     <div class="anchor"></div>
@@ -216,7 +219,8 @@
                         <a class="btn btn-large btn-block btn-info button_see" href="#" title="##">Читать далее...</a>
                     </div>
                     <div class="span3 otstup">
-                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в .pdf</a>
+                        <a class="btn btn-large btn-block btn-success button_see" href="#fakelink">Просмотреть в
+                            .pdf</a>
                     </div>
 
                     <div class="anchor"></div>
@@ -245,7 +249,7 @@
                     <input type="text" value="" placeholder="E-mail" class="last"/>
                     <textarea placeholder="Текст сообщения"></textarea>
                 </div>
-                <button class="submit">Отправить</button>
+                <button class="btn btn-large btn-block btn-success button_see submit">Отправить</button>
                 <div class="anchor"></div>
             </div>
         </form>

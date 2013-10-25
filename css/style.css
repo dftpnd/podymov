@@ -532,15 +532,8 @@ article h2 span {
 }
 
 .submit {
-    background: #64ffe0;
-    color: #10ad8d;
-    display: block;
-    line-height: 44px;
-    padding: 0 20px;
-    cursor: pointer;
-    float: right;
-    border-radius: 5px;
-    font-size: 1.2em;
+    float: right!important;
+    width: 30%!important;
 }
 
 /*-----------footer--------------*/
@@ -556,7 +549,7 @@ footer {
 }
 .footer_login{
     margin-top: 20px;
-    height: 100px;
+    height: 300px;
     background: #ecf0f1;
     text-align: center;
 }
