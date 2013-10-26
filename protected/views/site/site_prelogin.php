@@ -3,13 +3,11 @@
     <div class="container">
 
         <form class="form-signin" id="LoginForm">
-            <h2 class="form-signin-heading">Авторизуйтесь</h2>
+
+            <h2 class="form-signin-heading">Введите пароль</h2>
+
             <div class="error_enter">
-                Неправильный логин или пароль
-            </div>
-            <div class="login_inp spod">
-                <input type="text" class="form-control" placeholder="E-mail" autofocus name="LoginForm[username]"
-                       id="LoginForm_username">
+                Неправильный пароль<br/>
             </div>
             <div class="login_inp spod">
                 <input type="password" class="form-control" placeholder="Пароль" name="LoginForm[password]"
@@ -17,6 +15,9 @@
             </div>
             <div class="span-4 spod">
                 <button id="enterbtn" class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+            </div>
+            <div class="recovery_psss_div"><a href="#" class="recovery_psss" onclick="recoveryPass()">Восстановление
+                    пароля</a>
             </div>
         </form>
 
@@ -36,7 +37,6 @@
             dataType: 'json',
             data: {
                 "LoginForm[password]": $.md5($('#LoginForm_password').val()),
-                "LoginForm[username]": $("#LoginForm_username").val()
             },
             success: function (data) {
                 if (data.status == "success") {

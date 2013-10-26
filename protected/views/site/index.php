@@ -9,14 +9,13 @@
         </li>
         <li>
             <a href="#mission" onclick="anchorFunction($(this));return false">Публикации
-                <span class="icon_mission"></span>
-
+                <span class="icon-publish"></span>
                 <div></div>
             </a>
         </li>
         <li>
             <a href="#contact" onclick="anchorFunction($(this));return false">Контакты
-                <span class="icon_projects"></span>
+                <span class="icon-contact"></span>
 
                 <div></div>
             </a>

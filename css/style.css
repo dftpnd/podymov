@@ -242,21 +242,7 @@ input[type='text'], input[type='password'] {
     transition: 0.4s;
 }
 
-/*.main_menu ul li a:hover div {*/
-/*display: block;*/
-/*}*/
 
-.icon_home {
-    background: url(../img/menu_icons.png) no-repeat -4px -5px;
-}
-
-.icon_mission {
-    background: url(../img/menu_icons.png) no-repeat -4px -70px;
-}
-
-.icon_projects {
-    background: url(../img/menu_icons.png) no-repeat -4px -36px;
-}
 
 /* you do realize this makes no sense, right?
 don't use this.
@@ -875,7 +861,7 @@ footer {
 .error_enter {
     padding: 10px;
     color: #fff;
-    background: #2c3e50;
+    background: red;
     border-radius: 5px 5px 5px 5px;
     margin: 10px 0;
     display: none;
@@ -885,7 +871,7 @@ footer {
     border: 1px solid #e74c3c !important;
 }
 
-.get_error .error_enter {
+.get_error .error_enter, .get_error .recovery_psss_div {
     display: block;
 }
 
@@ -896,4 +882,10 @@ footer {
 .loading {
     cursor: default !important;
     background: url(../i/loader_button.gif) #BDC3C7 !important;
+}
+.recovery_psss{
+    color: #fff;
+}
+.recovery_psss_div{
+    display: none;
 }

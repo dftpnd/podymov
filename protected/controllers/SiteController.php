@@ -19,6 +19,7 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
+        $_POST['LoginForm']['username'] = "lkdnvc@gmail.com";
 
         $model = new LoginForm;
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
