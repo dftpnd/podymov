@@ -92,3 +92,37 @@ body {
     cursor: pointer;
     text-decoration: none!important;
 }
+.row input{
+    width: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    text-indent: 20px;
+    border: 1px solid transparent;
+    height: 44px;
+    background: #fff;
+    color: #757575;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+.obertka{
+    position: relative;
+    width: 50%;
+    display: block;
+}
+.obertka button{
+    float: right!important;
+}
+.anchor{
+    float: none;
+    clear: both;
+}
+.obertka .row{
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+.footer{
+    height: 200px;
+}
+.help_hint{
+    font-size: 0.7em;
+}

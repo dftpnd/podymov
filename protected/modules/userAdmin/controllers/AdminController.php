@@ -28,4 +28,8 @@ class AdminController extends Controller
         $this->render('user');
     }
 
+    public function actionCreatePost(){
+        $this->render('edit_post');
+    }
+
 }

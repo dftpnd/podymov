@@ -13,18 +13,12 @@
 <body>
 
 <div class="container">
-    <a class="return_maine_page" title="Вернуться на главную" href="/site/index">Вернуться на главную</a>
-
     <div class="masthead">
         <h3 class="text-muted">Панель управления сайтом</h3>
         <?php $this->renderPartial('application.modules.userAdmin.views.layouts._menu') ?>
-
     </div>
-
-
     <?php echo $content; ?>
-
-    <button class="btn btn-lg btn-success" type="button">Нажми на меня</button>
+    <div class="footer"></div>
 </div>
 </body>
 </html>
