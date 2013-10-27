@@ -44,16 +44,32 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot');
+    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf') format('truetype'),
+    url('fonts/icomoon.woff') format('woff'),
+    url('fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-.icon-print:before {
-    content: "\e600";
-}
-.icon-contact:before {
-    content: "\e601";
-}
-.icon-publish:before {
+
+.icon-uniE602:before {
     content: "\e602";
 }
+.icon-uniE601:before {
+    content: "\e601";
+}
+.icon-noun_project_11792:before {
+    content: "\e600";
+}
+.icon-key:before {
+    content: "\e603";
+}
+
+
 @import url(http://fonts.googleapis.com/css?family=Lato);
 * {
     margin: 0;
@@ -714,7 +730,10 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+.btn-block .icon-key{
+    display: inline-block;
+    margin-right: 10px;
+}
 .btn-success {
     background-color: #5BB75B;
     background-image: linear-gradient(to bottom, #62C462, #51A351);

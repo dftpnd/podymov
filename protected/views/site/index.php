@@ -2,20 +2,19 @@
     <ul class="centrator">
         <li>
             <a href="#home" onclick="anchorFunction($(this));return false">Главная
-                <span class="icon_home"></span>
-
+                <span class="icon-noun_project_11792"></span>
                 <div></div>
             </a>
         </li>
         <li>
             <a href="#mission" onclick="anchorFunction($(this));return false">Публикации
-                <span class="icon-publish"></span>
+                <span class="icon-uniE602"></span>
                 <div></div>
             </a>
         </li>
         <li>
             <a href="#contact" onclick="anchorFunction($(this));return false">Контакты
-                <span class="icon-contact"></span>
+                <span class="icon-uniE601"></span>
 
                 <div></div>
             </a>
@@ -104,7 +103,7 @@
         </h2>
 
         <div class="article_logo">
-            <span class="icon-publish"></span>
+            <span class="icon-uniE602"></span>
         </div>
         <div class="centrator">
             <div class="publikation">
@@ -229,7 +228,7 @@
             <div></div>
         </h2>
         <div class="article_logo">
-            <span class="icon-contact"></span>
+            <span class="icon-uniE601"></span>
         </div>
         <form id="apply" class="centrator">
             <div class='form_description'> Если у вас есть, что мне сказать - заполните форму
