@@ -3,11 +3,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Подымов"/>
-    <meta name="description" content="<?php echo CHtml::encode($this->title); ?>"/>
-    <meta name="generator" content="АТПП"/>
-
-    <title><?php echo CHtml::encode($this->title); ?></title>
+    <meta name="keywords" content="Подымов В.Н."/>
+    <meta name="description" content="Подымов В.Н."/>
+    <title>Подымов В.Н.</title>
 </head>
 <body>
 <?php echo $content; ?>

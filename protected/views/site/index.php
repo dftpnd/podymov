@@ -27,7 +27,7 @@
     <div class="article_wrapper">
         <h2>
             <span>
-                Никулин Юрий Владимирович
+                Подымов Владимир Николаевич
             </span>
 
             <div></div>
