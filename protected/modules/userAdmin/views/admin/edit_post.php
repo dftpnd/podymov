@@ -58,7 +58,7 @@
     function createUploader() {
         var uploader = new qq.FileUploader({
             element: document.getElementById('file-uploader-picter'),
-            action: '/userAdmin/admin/uploaded',
+            action: '/userAdmin/admin/Upload',
             onComplete: function (id, fileName, responseText) {
                 $('.avatar img').remove();
                 $('.avatar').append('<img src="' + responseText.file_url + '" />');
