@@ -19,7 +19,7 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
-        $_POST['LoginForm']['username'] = "lkdnvc@gmail.com";
+        $_POST['LoginForm']['username'] = User::USERNAME;
 
         $model = new LoginForm;
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'login-form') {
@@ -45,6 +45,7 @@ class SiteController extends Controller
 
         $this->render('/site/prelogin', array('model' => $model));
     }
+
     public function actionManage()
     {
         $this->render('/site/manage');
@@ -66,5 +67,39 @@ class SiteController extends Controller
         }
     }
 
+    public function actionConfermd()
+    {
+
+        $model = User::model()->findByAttributes(array('username' => User::USERNAME));
+        $model->confirm_email = 1;
+        $model->save(false);
+        $this->render('confermd');
+    }
+
+    public function actionRecovery()
+    {
+        $user = User::model()->findByAttributes(array('username' => User::USERNAME));
+        User::sendMail('recovery', array('title' => 'Восстановление пароля', 'password' => $user->openpass));
+    }
+
+    public function actionFeedBack()
+    {
+        if (!isset($_POST['Feedback'])) {
+            echo CJSON::encode(array('status' => 'failure'));
+            Yii::app()->end();
+        }
+
+        $feedback = new Feedback();
+        $feedback->attributes = $_POST['Feedback'];
+        $feedback->created = time();
+
+        if ($feedback->save()) {
+            Feedback::sendLetter($feedback);
+            echo CJSON::encode(array('status' => 'success'));
+        } else {
+            echo CJSON::encode(array('status' => 'failure', 'message' => $feedback->getErrors()));
+        }
+
+    }
 }
 

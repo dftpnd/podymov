@@ -41,7 +41,7 @@
             success: function (data) {
                 if (data.status == "success") {
                     window.location = ('/userAdmin/admin/index');
-                    $.pageLoaded();
+                    $.loaderus();
                 }
                 else {
                     $('#LoginForm').addClass('get_error')

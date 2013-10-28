@@ -7,11 +7,11 @@
     <meta name="author" content="">
     <title>Панель управления сайтом</title>
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/jquery.jgrowl.min.css" rel="stylesheet">
     <link href="/css/admin.css" rel="stylesheet">
 </head>
-
 <body>
-
+<div class="loaderus"></div>
 <div class="container">
     <div class="masthead">
         <h3 class="text-muted">Панель управления сайтом</h3>
@@ -19,6 +19,10 @@
     </div>
     <?php echo $content; ?>
     <div class="footer"></div>
+
 </div>
+<div id="jgrowl_error" class="jGrowl top-right"></div>
+<div id="jgrowl_success" class="jGrowl top-right"></div>
+<div id="jgrowl_complete" class="jGrowl center"></div>
 </body>
 </html>

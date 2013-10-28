@@ -31,12 +31,6 @@ class UserIdentity extends CUserIdentity {
         else if (!$user->validatePassword($this->password))
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
 
-        else if ($user->active == 0)
-            $this->errorCode = self::ERROR_PASSWORD_INVALID;
-        
-        else if ($user->banned != 0)
-            $this->errorCode = self::ERROR_PASSWORD_INVALID;
-
         else {
             $this->_id = $user->id;
             $this->username = $user->username;

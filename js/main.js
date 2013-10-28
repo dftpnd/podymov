@@ -1,6 +1,11 @@
 var FIXED_MENU_HEIGHT, DIFF, active_id , $articles, click_ev;
 var article_arr = [];
 var li_arr = [];
+
+var response = new Object();
+response.success = 'success';
+response.failure = 'failure';
+
 function anchorFunction($el) {
     click_ev = true;
     var anchor = $el.attr('href');
@@ -67,18 +72,62 @@ $.fn.navMenu = function (fan) {
     return this;
 };
 
-$.pageLoaded = function () {
-    alert('Запускаем лоадер');
+$.loaderus = function () {
+    if ($('.loaderus').is(":visible")) {
+        $('.loaderus').hide();
+    } else {
+        $('.loaderus').show();
+    }
 }
 /////
 
 
 function recoveryPass() {
     if (confirm("Забыли пароль?")) {
-        alert('пароль отправлен вам, на электронную почту.');
+        $.loaderus();
+        $.ajax({
+            url: '/site/recovery',
+            type: 'POST',
+            success: function () {
+                alert('пароль отправлен вам, на электронную почту.');
+                $.loaderus();
+            }
+        });
     }
 }
+function feedBack($element) {
+    $.loaderus();
+    $element.addClass('loading');
 
+    var $element;
+    var $form = $('#form-' + $element.attr('id'));
+
+    $.ajax({
+        url: '/site/feedBack',
+        type: 'POST',
+        dataType: 'json',
+        data: ($form.serialize()),
+        success: function (data) {
+            if (data.status == response.success) {
+                alert('Ваше письмо отправлено.')
+                $form.find('input').val('');
+                $form.find('textarea').val('');
+            } else {
+                for (key in data.message) {
+                    alert(data.message[key]);
+                }
+            }
+        },
+        complete: function () {
+            $element.removeClass('loading');
+            $.loaderus();
+        },
+        error: function () {
+            alert("Непредвиденная ошибка");
+        }
+
+    });
+}
 $(function () {
 
     /*

@@ -8,6 +8,7 @@
     <title>Подымов В.Н.</title>
 </head>
 <body>
+<div class="loaderus"></div>
 <?php echo $content; ?>
 <footer>
     <a href="#" class="login" title="Вход"></a>

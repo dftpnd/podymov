@@ -3,12 +3,14 @@
         <li>
             <a href="#home" onclick="anchorFunction($(this));return false">Главная
                 <span class="icon-noun_project_11792"></span>
+
                 <div></div>
             </a>
         </li>
         <li>
             <a href="#mission" onclick="anchorFunction($(this));return false">Публикации
                 <span class="icon-uniE602"></span>
+
                 <div></div>
             </a>
         </li>
@@ -230,17 +232,19 @@
         <div class="article_logo">
             <span class="icon-uniE601"></span>
         </div>
-        <form id="apply" class="centrator">
+        <form id="form-feedback" class="centrator">
             <div class='form_description'> Если у вас есть, что мне сказать - заполните форму
             </div>
             <div class="form_designing_wrap">
                 <div class="form_designing">
-                    <input type="text" value="" placeholder="Имя"/>
-                    <input type="text" value="" placeholder="Фамилия"/>
-                    <input type="text" value="" placeholder="E-mail" class="last"/>
-                    <textarea placeholder="Текст сообщения"></textarea>
+                    <input type="text" value="" placeholder="Имя" name="Feedback[name]" />
+                    <input type="text" value="" placeholder="Фамилия" name="Feedback[surname]" />
+                    <input type="text" value="" placeholder="E-mail" name="Feedback[email]" class="last"/>
+                    <textarea placeholder="Текст сообщения" name="Feedback[content]" ></textarea>
                 </div>
-                <button class="btn btn-large btn-block btn-success button_see submit">Отправить</button>
+                <button id="feedback" class="btn btn-large btn-block btn-success button_see submit"
+                        onclick="feedBack($(this));return false">Отправить
+                </button>
                 <div class="anchor"></div>
             </div>
         </form>
