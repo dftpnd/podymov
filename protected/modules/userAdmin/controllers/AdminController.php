@@ -16,8 +16,8 @@ class AdminController extends Controller
         $cs = Yii::app()->clientScript;
         $cs->registerCoreScript('jquery');
         $cs->registerScriptFile($this->createUrl('/js/jquery.jgrowl.min.js'));
+        $cs->registerScriptFile($this->createUrl('/js/fileuploader.js'));
         $cs->registerScriptFile($this->createUrl('/js/admin.js'));
-//        $cs->registerScriptFile($this->createUrl('/js/fileuploader.js'));
     }
 
     public function actionIndex()

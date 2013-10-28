@@ -10,6 +10,9 @@ body {
 }
 
 /* Main marketing message and sign up button */
+.jumbotron {
+    position: relative;
+}
 
 .jumbotron .btn {
     font-size: 21px;
@@ -101,16 +104,29 @@ body {
     text-decoration: none !important;
 }
 
-.row input {
-    width: 100%;
+.texare_div {
+    background: #fff;
+    color: #757575;
+    border-radius: 5px;
+    min-height: 100px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+input[type="text"], input[type="password"] {
     padding-left: 0 !important;
     padding-right: 0 !important;
     text-indent: 20px;
-    border: 1px solid transparent;
+    border: 1px solid;
     height: 44px;
     background: #fff;
     color: #757575;
     border-radius: 5px;
+    width: 100%;
+}
+
+.row input {
+    width: 100%;
     margin: 15px 0;
 }
 
@@ -157,11 +173,13 @@ body {
 #jgrowl_success  .jGrowl-message {
     color: #fff;
 }
-#jgrowl_complete{
-    top:30%!important
+
+#jgrowl_complete {
+    top: 30% !important
 }
-#jgrowl_complete .jGrowl-notification, #jgrowl_complete .jGrowl-closer{
-    margin: 20px auto 20px!important;
+
+#jgrowl_complete .jGrowl-notification, #jgrowl_complete .jGrowl-closer {
+    margin: 20px auto 20px !important;
     background: #3498db;
 }
 
@@ -169,13 +187,16 @@ body {
     cursor: default !important;
     background: url(../i/loader_button.gif);
 }
-.hide_block{
+
+.hide_block {
     display: none;
 }
-.show_block{
+
+.show_block {
 
 }
-.loaderus{
+
+.loaderus {
     display: none;
     position: fixed;
     z-index: 999;
@@ -183,4 +204,21 @@ body {
     height: 100%;
     opacity: 0.8;
     background: url(../i/maine_loader.gif) no-repeat center center #fff;
+}
+
+.file_icon {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    right: 10px;
+}
+
+.pdf_icon {
+    background: url(../i/files.png) no-repeat -48px 0;
+}
+
+.doc_icon {
+    background: url(../i/files.png) no-repeat 0 0;
 }
