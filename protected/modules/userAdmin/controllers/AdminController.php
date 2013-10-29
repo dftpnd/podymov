@@ -53,7 +53,7 @@ class AdminController extends Controller
     }
 
 
-    public function actionCreatePost()
+    public function actionPostEdit()
     {
 
         if (isset($_POST['Post'])) {

@@ -1,1 +1,1 @@
-<a href="/userAdmin/admin/createpost">Create post<a>
+<a href="/userAdmin/admin/PostEdit">Create post<a>
