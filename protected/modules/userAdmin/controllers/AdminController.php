@@ -55,20 +55,34 @@ class AdminController extends Controller
 
     public function actionCreatePost()
     {
-        $this->render('edit_post');
+
+        if (isset($_POST['Post'])) {
+            Post::model()->savePost();
+            Yii::app()->end();
+        }
+        if (isset($_GET['post_id'])) {
+            $post = Post::model()->findByPk($_GET['post_id']);
+        } else {
+            $post = new Post();
+        }
+
+        Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget');
+        $this->render('edit_post', array('post' => $post));
     }
 
-    public function actionUpload()
-    {
-        $uf = DIRECTORY_SEPARATOR;
-        $basePath = Yii::app()->basePath . "{$uf}..{$uf}uploads{$uf}";
 
-        $allowedExtensions = array("png", "jpg", "gif", "jpeg");
-        $sizeLimit = 2 * 1024 * 1024;
+    public function actionUploadPdf()
+    {
+        $basePath = Files::getBasePath();
+
+        $allowedExtensions = array("pdf");
+        $sizeLimit = 100 * 1024 * 1024;
 
         $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
         $result = $uploader->handleUpload($basePath);
 
+
+        $result['status'] = 'failure';
         if (empty($result['error'])) {
             $file = array(
                 'name' => $result['filename'],
@@ -76,15 +90,90 @@ class AdminController extends Controller
                 'size' => $result['size'],
                 'ext' => $result['ext'],
             );
+
             $files = new Files();
             $files->attributes = $file;
             $files->save();
 
             $result['file_id'] = $files->id;
-            $result['file_url'] = Yii::app()->createAbsoluteUrl('uploads/avatar/' . $files->name);
+            $result['orig_name'] = $files->orig_name;
+            $result['status'] = 'success';
+        }
+        echo htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+    }
+
+    public function actionUploaddDoc()
+    {
+        $basePath = Files::getBasePath();
+
+        $allowedExtensions = array("doc", "docx");
+        $sizeLimit = 100 * 1024 * 1024;
+
+        $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
+        $result = $uploader->handleUpload($basePath);
+
+        $result['status'] = 'failure';
+        if (empty($result['error'])) {
+            $file = array(
+                'name' => $result['filename'],
+                'orig_name' => $result['user_filename'],
+                'size' => $result['size'],
+                'ext' => $result['ext'],
+            );
+
+            $files = new Files();
+            $files->attributes = $file;
+            $files->save();
+
+            $result['file_id'] = $files->id;
+            $result['orig_name'] = $files->orig_name;
+            $result['status'] = 'success';
         }
         echo htmlspecialchars(json_encode($result), ENT_NOQUOTES);
     }
 
 
+    public function actionImperaviUpload()
+    {
+        $t = time() . '_';
+        $basePath = Files::getBasePath();
+        $new_file = $basePath . $t . $_FILES['file']['name'];
+
+
+        if (!copy($_FILES['file']['tmp_name'], $new_file)) {
+            echo "не удалось скопировать";
+        }
+
+        $array = array(
+            'filelink' => '/uploads/' . $t . $_FILES['file']['name']
+        );
+
+        echo stripslashes(json_encode($array));
+    }
+
+    public function actionDeletePostFile()
+    {
+        $file_id = $_GET['file_id'];
+
+
+        $post = Post::model()->findByAttributes(array('doc_file' => $file_id));
+
+
+        if (empty($post)) {
+            $post = Post::model()->findByAttributes(array('pdf_file' => $file_id));
+            if (!empty($post)) {
+                $post->pdf_file = NULL;
+            }
+        } else {
+            $post->doc_file = NULL;
+        }
+
+        if (!empty($post)) {
+            $post->save();
+        }
+
+
+        echo CJSON::encode(array('status' => 'success'));
+
+    }
 }

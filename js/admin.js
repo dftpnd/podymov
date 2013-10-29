@@ -13,17 +13,30 @@ function IsEmail(email) {
 ///
 
 
-$.fn.jax = function (callback) {
+$.fn.jax = function (complete, success, url) {
     var $element = $(this);
+    var data = '';
     $element.addClass('loading');
 
+    if (typeof url === "undefined") {
+        url = window.location;
+    }
+
+    if ($('#form-' + $element.attr('id')).length !== 0) {
+        data = $('#form-' + $element.attr('id')).serialize();
+    }
+
+
     $.ajax({
-        url: window.location,
+        url: url,
         type: 'POST',
         dataType: 'json',
-        data: ($('#form-' + $element.attr('id')).serialize()),
+        data: data,
         success: function (data) {
             if (data.status == response.success) {
+                if (typeof success !== "undefined") {
+                    success(data);
+                }
                 $('#jgrowl_success').jGrowl("Сохранено");
             } else {
                 for (key in data.message) {
@@ -33,8 +46,8 @@ $.fn.jax = function (callback) {
         },
         complete: function () {
             $element.removeClass('loading');
-            if (typeof callback !== "undefined") {
-                callback();
+            if (typeof complete !== "undefined") {
+                complete();
             }
         },
         error: function () {
@@ -75,6 +88,7 @@ function sendTestEmail() {
         url: '/userAdmin/admin/sendConferm',
         type: 'POST',
         dataType: 'json',
+        data: ($('#form-save-post').serialize()),
         success: function (data) {
             if (data.status == response.success) {
 
@@ -89,4 +103,31 @@ function sendTestEmail() {
         }
 
     });
+}
+
+function savePost($element) {
+    $element.addClass('loading');
+    $.loaderus();
+
+    $element.jax(function () {
+        $.loaderus();
+    }, function (data) {
+        $('.post_id').html('<input type="hidden" name="Post[id]"  value="' + data.post_id + '" />');
+    });
+
+}
+
+
+function deleteFile($element) {
+    var file_id = $element.parent().attr('file_id')
+    var file_name = $element.siblings('a').text();
+
+    if (confirm('Удалить файл  "' + file_name + '"')) {
+        $.loaderus();
+        $element.jax(function () {
+            $.loaderus();
+        }, function (data) {
+            $('[file_id="' + file_id + '"]').remove();
+        }, '/userAdmin/admin/deletePostFile?file_id=' + file_id);
+    }
 }

@@ -222,3 +222,30 @@ input[type="text"], input[type="password"] {
 .doc_icon {
     background: url(../i/files.png) no-repeat 0 0;
 }
+.qq-upload-failed-text{
+    display: none;
+}
+.qq-upload-fail .qq-upload-failed-text{
+    display: inline-block;
+    color: red;
+}
+.qq-upload-success{
+    display: none;
+}
+.redactor_editor{
+    min-height: 200px;
+}
+.fds{
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #5CB85C;
+    cursor: pointer;
+}
+.dds{
+    color: #c0392b;
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
