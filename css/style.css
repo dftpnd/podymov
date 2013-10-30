@@ -293,7 +293,9 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
 .text_classic {
 
 }
-
+.oen_post{
+    color: #2C3E50;
+}
 .text_classic p {
     display: block;
     text-indent: 20px;

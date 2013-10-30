@@ -1,5 +1,5 @@
 <article id="mission">
-    <div class="article_wrapper">
+    <div class="article_wrapper oen_post">
         <div class="centrator">
             <a href="/site/index" class="go_home">&larr; На главную</a>
         </div>
