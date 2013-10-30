@@ -333,7 +333,7 @@ article {
 article h2, .title_link {
     text-align: center;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 
     font-size: 26px;
     text-rendering: optimizelegibility;
@@ -650,6 +650,9 @@ footer {
     background: #ecf0f1;
     padding: 30px;
     margin-bottom: 50px;
+}
+.publikation .text_classic{
+    color: #2C3E50;
 }
 .site_index .publikation_content{
     max-height: 400px;
