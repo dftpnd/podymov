@@ -1,0 +1,81 @@
+body {
+    background: #000;
+    height: 5000px;
+}
+
+i {
+    display: block;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    left: 30px;
+    background: url(lOBxb.png);
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+i:first-child {
+
+}
+
+i:last-child {
+    top: 22px;
+    left: 56px;
+
+}
+
+
+
+.animate_1 {
+    animation: invertBarrelRoll 2s infinite linear;
+    -webkit-animation: invertBarrelRoll 2s infinite linear;
+}
+
+.animate_2 {
+    animation: barrelRoll 2s infinite linear;
+    -webkit-animation: barrelRoll 2s infinite linear;
+}
+
+.vers .animate_1 {
+    animation: barrelRoll 2s infinite linear;
+    -webkit-animation: barrelRoll 2s infinite linear;
+}
+
+.vers  .animate_2 {
+    animation: invertBarrelRoll 2s infinite linear;
+    -webkit-animation: invertBarrelRoll 2s infinite linear;
+}
+
+.running {
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+
+
+@keyframes barrelRoll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes invertBarrelRoll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@-webkit-keyframes barrelRoll {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes invertBarrelRoll {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(-360deg); }
+}
