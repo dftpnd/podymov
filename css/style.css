@@ -649,7 +649,16 @@ footer {
     padding: 30px;
     margin-bottom: 50px;
 }
-
+.site_index .publikation_content{
+    max-height: 400px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.publikation h1, .publikation h2, .publikation h3, .publikation h4, .publikation h5, .publikation h6{
+    color: #2C3E50;
+}
 .title_link {
     color: #3498db;
 }

@@ -94,7 +94,7 @@
             </div>
         </div>
     </article>
-    <article id="mission">
+    <article id="mission" class="site_index">
         <div class="article_wrapper">
             <h2>
             <span>
@@ -111,10 +111,13 @@
                 <?php if (!empty($posts)): ?>
                     <?php foreach ($posts as $post): ?>
                         <div class="publikation">
-                            <a class="title_link" href="/site/postview/<?php echo $post->id?>"  ><?php echo $post->title; ?></a>
+                            <div class="publikation_content">
+                                <a class="title_link"
+                                   href="/site/postview/<?php echo $post->id ?>"><?php echo $post->title; ?></a>
 
-                            <div class='text_classic'>
-                                <?php echo $post->content; ?>
+                                <div class='text_classic'>
+                                    <?php echo $post->content; ?>
+                                </div>
                             </div>
                             <div class="publikation_panel">
                                 <?php if (!empty($post->pdf_file)): ?>
@@ -127,12 +130,14 @@
                                 <?php endif; ?>
 
                                 <div class="span3">
-                                    <a class="btn btn-large btn-block btn-info button_see" href="/site/postview/<?php echo $post->id?>" title="<?php $post->title?>">Читать
+                                    <a class="btn btn-large btn-block btn-info button_see"
+                                       href="/site/postview/<?php echo $post->id ?>" title="<?php $post->title ?>">Читать
                                         далее...</a>
                                 </div>
                                 <?php if (!empty($post->pdf_file)): ?>
                                     <div class="span3 otstup">
-                                        <a class="btn btn-large btn-block btn-success button_see" title="<?php echo $post->uploded_pdf->orig_name ?>"
+                                        <a class="btn btn-large btn-block btn-success button_see"
+                                           title="<?php echo $post->uploded_pdf->orig_name ?>"
                                            href="/uploads/<?php echo $post->uploded_pdf->name ?>">Просмотреть
                                             в
                                             .pdf</a>
