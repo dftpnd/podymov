@@ -4,16 +4,16 @@ class SiteController extends Controller
 {
     public function actionIndex()
     {
+        $posts = Post::model()->findAllByAttributes(array('visible'=>1));
 
-        $this->title = 'Главная';
-        $this->render('index');
+        $this->render('index', array('posts' => $posts));
 
 
     }
 
     public function actionPreLogin()
     {
-        $this->title = 'Главная';
+
         $this->render('site_prelogin');
     }
 
@@ -100,6 +100,34 @@ class SiteController extends Controller
             echo CJSON::encode(array('status' => 'failure', 'message' => $feedback->getErrors()));
         }
 
+    }
+
+    public function actionPostView($id)
+    {
+        $post = Post::model()->findByPk($id);
+        $this->render('postview', array('post' => $post));
+    }
+
+    public function actionFile($id)
+    {
+        $file = Files::model()->findByPk($id);
+        if (!empty($file)) {
+            $ds = DIRECTORY_SEPARATOR;
+            $path = Yii::app()->basePath . $ds . '..' . $ds . 'uploads' . $ds . $file->name;
+            if (file_exists($path)) {
+                //папка с названием реестра
+                //посыл хедеров браузеру
+                header('Content-Disposition: attachment; filename="' . $file->orig_name . '"');
+                header("Content-Type: application/force-download");
+                header("Content-Type: application/octet-stream");
+                header("Content-Type: application/download");
+                header("Content-Description: File Transfer");
+                header('Content-Length: ' . $file->size);
+
+                //скачивание
+                echo file_get_contents($path);
+            }
+        }
     }
 }
 

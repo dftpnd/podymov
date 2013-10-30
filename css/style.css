@@ -295,12 +295,15 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
 }
 
 .text_classic p {
-    display: inline-block;
+    display: block;
     text-indent: 20px;
     margin: 5px 0;
     color: #2c3e50;
 }
-
+.one_post{
+    border: 1px solid black;
+    margin-bottom: 500px!important;
+}
 /*-----------centrator--------------*/
 .centrator {
     margin: 0 auto;
@@ -909,4 +912,10 @@ footer {
     height: 100%;
     opacity: 0.8;
     background: url(../i/maine_loader.gif) no-repeat center center #fff;
+}
+.go_home{
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
 }

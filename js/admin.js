@@ -131,3 +131,16 @@ function deleteFile($element) {
         }, '/userAdmin/admin/deletePostFile?file_id=' + file_id);
     }
 }
+
+function deletePublish($element) {
+    var post_id = $element.parents('tr').attr('post_id');
+    var post_name = $element.parents('tr').find('.post_title_link').text();
+    $.loaderus();
+    if (confirm('Если вы удалите публикацию "' + post_name + '", восстановить её будет невозможно, продолжить?')) {
+        $element.jax(function () {
+            $.loaderus();
+        }, function (data) {
+            $('[post_id="' + post_id + '"]').remove();
+        }, '/userAdmin/admin/deletePublish?post_id=' + post_id);
+    }
+}

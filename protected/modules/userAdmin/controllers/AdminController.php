@@ -28,7 +28,8 @@ class AdminController extends Controller
 
     public function actionPost()
     {
-        $this->render('post');
+        $posts = Post::model()->findAll();
+        $this->render('post', array('posts' => $posts));
     }
 
     public function actionUser()
@@ -174,6 +175,26 @@ class AdminController extends Controller
 
 
         echo CJSON::encode(array('status' => 'success'));
+
+    }
+
+
+    public function actionDeletePublish()
+    {
+        if (!isset($_GET['post_id'])) {
+            echo CJSON::encode(array('status' => 'failure', 'message' => 'Неправильный параметр запроса'));
+            Yii::app()->end;
+        }
+
+        $post = Post::model()->findByPk($_GET['post_id']);
+
+        if ($post->delete()) {
+            $response = array('status' => 'success');
+        } else {
+            $response = array('status' => 'failure', 'message' => 'Удаление не произошло. Обратитесь к админестратору или попробуйте еще раз');
+        }
+
+        echo CJSON::encode($response);
 
     }
 }
