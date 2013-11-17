@@ -11,7 +11,9 @@ class UserAdminModule extends CWebModule
 		$this->setImport(array(
 			'userAdmin.models.*',
 			'userAdmin.components.*',
+
 		));
+
 	}
 
 	public function beforeControllerAction($controller, $action)

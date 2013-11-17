@@ -293,14 +293,19 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
 .text_classic {
 
 }
-
+.oen_post{
+    color: #2C3E50;
+}
 .text_classic p {
-    display: inline-block;
+    display: block;
     text-indent: 20px;
     margin: 5px 0;
     color: #2c3e50;
 }
-
+.one_post{
+    border: 1px solid black;
+    margin-bottom: 500px!important;
+}
 /*-----------centrator--------------*/
 .centrator {
     margin: 0 auto;
@@ -328,7 +333,7 @@ article {
 article h2, .title_link {
     text-align: center;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 
     font-size: 26px;
     text-rendering: optimizelegibility;
@@ -646,7 +651,19 @@ footer {
     padding: 30px;
     margin-bottom: 50px;
 }
-
+.publikation .text_classic{
+    color: #2C3E50;
+}
+.site_index .publikation_content{
+    max-height: 400px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.publikation h1, .publikation h2, .publikation h3, .publikation h4, .publikation h5, .publikation h6{
+    color: #2C3E50;
+}
 .title_link {
     color: #3498db;
 }
@@ -909,4 +926,10 @@ footer {
     height: 100%;
     opacity: 0.8;
     background: url(../i/maine_loader.gif) no-repeat center center #fff;
+}
+.go_home{
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
 }
