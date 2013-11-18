@@ -643,10 +643,10 @@ footer {
 
 /*------------------------------*/
 .foto {
-    width: 187px;
-    height: 191px;
+    width: 378px;
+    height: 262px;
     background: #fff;
-    background: url(../i/nikylin.jpg);
+    background: url(../i/podymov.png);
     border-radius: 2%;
     margin: 30px auto 30px;
 }
