@@ -40,7 +40,7 @@
             },
             success: function (data) {
                 if (data.status == "success") {
-                    window.location = ('/userAdmin/admin/index');
+                    window.location = ('/userAdmin/admin/post');
                     $.loaderus();
                 }
                 else {
