@@ -1243,5 +1243,7 @@ class UserController extends Controller
         echo json_encode(array('status' => 'success', 'html' => $html, 'title' => $title));
     }
 
+
+
 }
 

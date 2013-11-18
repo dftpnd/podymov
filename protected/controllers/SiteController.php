@@ -4,9 +4,10 @@ class SiteController extends Controller
 {
     public function actionIndex()
     {
-        $posts = Post::model()->findAllByAttributes(array('visible'=>1));
+        $posts = Post::model()->findAllByAttributes(array('visible' => 1));
+        $user = User::model()->findByAttributes(array('username' => User::USERNAME));
 
-        $this->render('index', array('posts' => $posts));
+        $this->render('index', array('posts' => $posts, 'user' => $user));
 
 
     }

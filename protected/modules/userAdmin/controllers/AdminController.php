@@ -197,4 +197,19 @@ class AdminController extends Controller
         echo CJSON::encode($response);
 
     }
+
+
+    public function  actionSaveUserText()
+    {
+
+        $user = $user = User::model()->findByAttributes(array('username' => User::USERNAME));
+        $user->user_text = $_POST['user_text'];
+        $user->save(false);
+
+        echo json_encode(
+            array(
+                'status' => 'success'
+            )
+        );
+    }
 }

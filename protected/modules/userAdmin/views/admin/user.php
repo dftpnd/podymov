@@ -45,6 +45,7 @@
     <div class="obertka">
         <form id='form-save-password'>
             <p class="help_hint">Поля изменение пароля авторизации.</p>
+
             <div class="row">
                 <input type="password" placeholder="Пароль" name="User[password]">
             </div>
@@ -53,6 +54,23 @@
             </div>
 
             <button id="save-password" class="btn btn-primary btn-lg" onclick="savePassword($(this));return false">
+                Сохранить
+            </button>
+            <div class="anchor"></div>
+        </form>
+    </div>
+</div>
+
+<div class="jumbotron theme-showcase">
+    <h1>Текст на главной странице под фото</h1>
+
+    <div class="obertka">
+        <form id='form-user-text'>
+            <div class="row">
+                <textarea name="user_text" style="width: 100%; min-height: 200px;margin-bottom: 20px"><?php echo $user->user_text?></textarea>
+            </div>
+            <div class="anchor"></div>
+            <button id="user-text" class="btn btn-primary btn-lg" onclick="saveUserText($(this));return false">
                 Сохранить
             </button>
             <div class="anchor"></div>

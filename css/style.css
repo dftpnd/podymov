@@ -233,7 +233,12 @@ input[type='text'], input[type='password'] {
     background: #cecece;
     height: 3px;
 }
-
+.plashka{
+    height: 50px;
+}
+.maine_text{
+    text-align: center;
+}
 .poplavok {
     height: 5px;
     background: #8e44ad;

@@ -144,3 +144,8 @@ function deletePublish($element) {
         }, '/userAdmin/admin/deletePublish?post_id=' + post_id);
     }
 }
+function saveUserText($element){
+    $element.jax(function () {
+
+    }, function () {}, '/userAdmin/admin/saveUserText');
+}
