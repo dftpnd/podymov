@@ -53,7 +53,7 @@
         <div class="article_wrapper">
             <h2>
             <span>
-            Публикации
+            Статьи по учебному процессу
             </span>
 
                 <div class=""></div>

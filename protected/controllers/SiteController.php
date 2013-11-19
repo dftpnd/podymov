@@ -4,7 +4,12 @@ class SiteController extends Controller
 {
     public function actionIndex()
     {
-        $posts = Post::model()->findAllByAttributes(array('visible' => 1));
+
+        $criteria = new CDbCriteria(
+            array('order'=>'created ASC'));
+
+
+        $posts = Post::model()->findAllByAttributes(array('visible' => 1), $criteria);
         $user = User::model()->findByAttributes(array('username' => User::USERNAME));
 
         $this->render('index', array('posts' => $posts, 'user' => $user));
