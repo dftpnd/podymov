@@ -316,10 +316,14 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
 }
 .text_classic table{
     width: 100%;
+    border-collapse: collapse;
 }
 .text_classic td{
     padding: 10px;
     border: 1px solid #ececec;
+    color: #000;
+    font-family: "Times New Roman";
+    font-size: 1.1em;
 }
 .one_post{
     border: 1px solid black;
