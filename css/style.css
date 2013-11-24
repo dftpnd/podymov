@@ -662,8 +662,6 @@ footer {
 .site_index .publikation_content{
     max-height: 400px;
     display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
 }
 .publikation h1, .publikation h2, .publikation h3, .publikation h4, .publikation h5, .publikation h6{
