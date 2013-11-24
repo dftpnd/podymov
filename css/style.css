@@ -314,6 +314,11 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
     font-family: "Times New Roman";
     font-size: 1.1em;
 }
+.text_classic li{
+    color: #000;
+    font-family: "Times New Roman";
+    font-size: 1.1em;
+}
 .text_classic table{
     width: 100%;
     border-collapse: collapse;
