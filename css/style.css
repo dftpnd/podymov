@@ -305,7 +305,8 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
     display: block;
     text-indent: 20px;
     margin: 5px 0;
-    color: #2c3e50;
+    color: #000;
+    font-family: "Times New Roman";
 }
 .one_post{
     border: 1px solid black;
