@@ -309,7 +309,7 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
 .text_classic p {
     display: block;
     text-indent: 20px;
-    margin: 5px 0;
+    margin: 1em 0;
     color: #000;
     font-family: "Times New Roman";
     font-size: 1.1em;
@@ -950,7 +950,7 @@ footer {
     background: url(../i/maine_loader.gif) no-repeat center center #fff;
 }
 .go_home{
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
