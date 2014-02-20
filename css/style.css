@@ -977,8 +977,8 @@ footer {
     color: #fff;
 }
 
-.publikation_content .text_classic {
-    -webkit-column-width: 400px;
-    column-width: 400px;
+.text_classic {
+    -webkit-column-width: 900px;
+    column-width: 900px;
     height: 100%;
 }
