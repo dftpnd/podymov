@@ -233,12 +233,15 @@ input[type='text'], input[type='password'] {
     background: #cecece;
     height: 3px;
 }
-.plashka{
+
+.plashka {
     height: 50px;
 }
-.maine_text{
+
+.maine_text {
     text-align: center;
 }
+
 .poplavok {
     height: 5px;
     background: #8e44ad;
@@ -298,14 +301,17 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
 .text_classic {
 
 }
-.oen_post{
+
+.oen_post {
     color: #2C3E50;
 }
-.text_classic{
+
+.text_classic {
     color: #000;
     font-family: "Times New Roman";
     font-size: 1.1em;
 }
+
 .text_classic p {
     display: block;
     text-indent: 20px;
@@ -314,16 +320,19 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
     font-family: "Times New Roman";
     font-size: 1.1em;
 }
-.text_classic li{
+
+.text_classic li {
     color: #000;
     font-family: "Times New Roman";
     font-size: 1.1em;
 }
-.text_classic table{
+
+.text_classic table {
     width: 100%;
     border-collapse: collapse;
 }
-.text_classic td{
+
+.text_classic td {
     padding: 10px;
     border: 1px solid #ececec;
     color: #000;
@@ -331,10 +340,12 @@ http://www.youtube.com/watch?v=umDr0mPuyQc */
     font-size: 1.1em;
     text-align: left;
 }
-.one_post{
+
+.one_post {
     border: 1px solid black;
-    margin-bottom: 500px!important;
+    margin-bottom: 500px !important;
 }
+
 /*-----------centrator--------------*/
 .centrator {
     margin: 0 auto;
@@ -540,7 +551,7 @@ article h2 span {
     border-bottom: 1px solid #66c7ff;
 }
 
-#projects  .extension_line {
+#projects .extension_line {
     top: 140px;
 }
 
@@ -667,10 +678,10 @@ footer {
 
 /*------------------------------*/
 .foto {
-    width: 378px;
-    height: 262px;
+    width: 200px;
+    height: 243px;
     background: #fff;
-    background: url(../i/podymov.png);
+    background: url(../i/podymov.jpg);
     border-radius: 2%;
     margin: 30px auto 30px;
 }
@@ -680,17 +691,21 @@ footer {
     padding: 30px;
     margin-bottom: 50px;
 }
-.publikation .text_classic{
+
+.publikation .text_classic {
     color: #2C3E50;
 }
-.site_index .publikation_content{
+
+.site_index .publikation_content {
     max-height: 400px;
     display: block;
     overflow: hidden;
 }
-.publikation h1, .publikation h2, .publikation h3, .publikation h4, .publikation h5, .publikation h6{
+
+.publikation h1, .publikation h2, .publikation h3, .publikation h4, .publikation h5, .publikation h6 {
     color: #2C3E50;
 }
+
 .title_link {
     color: #3498db;
 }
@@ -954,7 +969,8 @@ footer {
     opacity: 0.8;
     background: url(../i/maine_loader.gif) no-repeat center center #fff;
 }
-.go_home{
+
+.go_home {
     font-size: 1.3em;
     font-weight: bold;
     text-decoration: none;
