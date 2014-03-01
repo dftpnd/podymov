@@ -116,7 +116,7 @@ class User extends CActiveRecord
         } else {
             $response = array('status' => 'failure', 'message' => $user->getErrors());
         }
-        die('1');
+
         echo CJSON::encode($response);
 
         Yii::app()->end();
