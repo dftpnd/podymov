@@ -26,7 +26,7 @@ class User extends CActiveRecord
             array('username, laste_enter', 'length', 'max' => 128),
 
             array('username, password', 'required', 'on' => 'register'),
-            array('password password_repeat', 'compare', 'compareAttribute' => 'password', 'on' => 'register'),
+            array('password, password_repeat', 'compare', 'compareAttribute' => 'password', 'on' => 'register'),
         );
     }
 
@@ -103,6 +103,7 @@ class User extends CActiveRecord
 
     public static function updatePaasword()
     {
+
         $user = self::model()->findByAttributes(array('username' => self::USERNAME));
         $user->openpass = $_POST['User']['password'];
         $user->password = md5($_POST['User']['password']);
@@ -115,6 +116,7 @@ class User extends CActiveRecord
         } else {
             $response = array('status' => 'failure', 'message' => $user->getErrors());
         }
+        die('1');
         echo CJSON::encode($response);
 
         Yii::app()->end();

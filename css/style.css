@@ -978,7 +978,7 @@ footer {
 }
 
 .text_classic {
-    -webkit-column-width: 900px;
-    column-width: 900px;
-    height: 100%;
+    /*-webkit-column-width: 900px;*/
+    /*column-width: 900px;*/
+    /*height: 100%;*/
 }
