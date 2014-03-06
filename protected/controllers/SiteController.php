@@ -123,7 +123,7 @@ class SiteController extends Controller
             }
         }
 
-        
+
         Yii::import('ext.crocodoc-php.Crocodoc');
 
         Crocodoc::setApiToken('xakTrn7ZCepKQ319wAdbNH84');
