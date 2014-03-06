@@ -6,7 +6,7 @@ class SiteController extends Controller
     {
 
         $criteria = new CDbCriteria(
-            array('order'=>'created ASC'));
+            array('order' => 'created ASC'));
 
 
         $posts = Post::model()->findAllByAttributes(array('visible' => 1), $criteria);
@@ -108,10 +108,49 @@ class SiteController extends Controller
 
     }
 
+
     public function actionPostView($id)
     {
         $post = Post::model()->findByPk($id);
-        $this->render('postview', array('post' => $post));
+        $bu = Yii::app()->getBaseUrl(true);
+        if (!empty($post->doc_file)) {
+            $formW4Url = "{$bu}/uploads/{$post->uploded_doc->name}";
+        } else {
+            if (!empty($post->pdf_file)) {
+                $formW4Url = "{$bu}/uploads/{$post->uploded_pdf->name}";
+            } else {
+                $formW4Url = '';
+            }
+        }
+
+        
+        Yii::import('ext.crocodoc-php.Crocodoc');
+
+        Crocodoc::setApiToken('xakTrn7ZCepKQ319wAdbNH84');
+
+
+        try {
+            $uuid = CrocodocDocument::upload($formW4Url);
+        } catch (CrocodocException $e) {
+            echo 'failed :(' . "\n";
+            echo '  Error Code: ' . $e->errorCode . "\n";
+            echo '  Error Message: ' . $e->getMessage() . "\n";
+        }
+
+        try {
+            $sessionKey = CrocodocSession::create($uuid);
+        } catch (CrocodocException $e) {
+            echo 'failed :(' . "\n";
+            echo '  Error Code: ' . $e->errorCode . "\n";
+            echo '  Error Message: ' . $e->getMessage() . "\n";
+        }
+
+
+        $this->render('postview', array(
+            'post' => $post,
+            'uuid' => $uuid,
+            'sessionKey' => $sessionKey
+        ));
     }
 
     public function actionFile($id)

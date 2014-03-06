@@ -162,7 +162,7 @@ input[type="text"], input[type="password"] {
     background: #c0392b;
 }
 
-#jgrowl_error  .jGrowl-message {
+#jgrowl_error .jGrowl-message {
     color: #fff;
 }
 
@@ -170,7 +170,7 @@ input[type="text"], input[type="password"] {
     background: #27ae60;
 }
 
-#jgrowl_success  .jGrowl-message {
+#jgrowl_success .jGrowl-message {
     color: #fff;
 }
 
@@ -262,10 +262,12 @@ input[type="text"], input[type="password"] {
     color: #fff;
     text-align: center;
 }
-.delete_publish{
+
+.delete_publish {
     color: #c0392b;
     cursor: pointer;
 }
+
 .status_red {
     background: #c0392b;
 }
@@ -273,6 +275,18 @@ input[type="text"], input[type="password"] {
 .status_green {
     background: #5CB85C;
 }
-.btn_reate_publish{
+
+.btn_reate_publish {
     float: right;
+}
+
+
+
+button {
+    line-height: 18px;
+}
+
+.label {
+    display: inline-block;
+    width: 80px;
 }
