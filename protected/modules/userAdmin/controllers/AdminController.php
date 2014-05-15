@@ -170,7 +170,11 @@ class AdminController extends Controller
         }
 
         if (!empty($post)) {
-            $post->save();
+
+            if (!$post->save()) {
+                echo CJSON::encode(array('status' => 'error', 'message' => $post->getErrors()));
+                Yii::app()->end();
+            }
         }
 
 
@@ -212,7 +216,6 @@ class AdminController extends Controller
             )
         );
     }
-
 
 
 }
