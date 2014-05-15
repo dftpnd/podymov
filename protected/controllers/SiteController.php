@@ -6,7 +6,7 @@ class SiteController extends Controller
     {
 
         $criteria = new CDbCriteria(
-            array('order' => 'created ASC'));
+            array('order' => 'id ASC'));
 
 
         $posts = Post::model()->findAllByAttributes(array('visible' => 1), $criteria);
