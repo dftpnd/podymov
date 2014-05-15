@@ -123,7 +123,7 @@
     </div>
 
 
-    <button id="save-post" class="btn btn-lg btn-success" onclick="savePost($(this));return false">Сохранить</button>
+    <button id="save-post" class="btn btn-lg btn-success pull-right" onclick="savePost($(this));return false">Сохранить</button>
 </form>
 
 
