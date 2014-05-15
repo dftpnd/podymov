@@ -27,7 +27,7 @@ class Post extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('created, content, title', 'required'),
+            array('created, content, pdf_file, title', 'required'),
             array('created, visible, pdf_file, doc_file', 'numerical', 'integerOnly' => true),
             array('content', 'safe'),
             // The following rule is used by search().
@@ -112,7 +112,6 @@ class Post extends CActiveRecord
         } else {
             $model = new self;
         }
-
 
 
         $model->attributes = $_POST['Post'];
