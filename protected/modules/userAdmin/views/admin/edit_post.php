@@ -6,13 +6,13 @@
 
 <ol class="breadcrumb">
     <li><a href="/userAdmin/admin/post">Публикации</a></li>
-    <li class="active"><?php echo $st;?></li>
+    <li class="active"><?php echo $st; ?></li>
 </ol>
 
 <div class="page-header">
-        <h1>
-            <?php echo $st;?> публикации
-        </h1>
+    <h1>
+        <?php echo $st; ?> публикации
+    </h1>
 </div>
 
 <form id="form-save-post">
@@ -123,7 +123,10 @@
     </div>
 
 
-    <button id="save-post" class="btn btn-lg btn-success pull-right" onclick="savePost($(this));return false">Сохранить</button>
+    <button id="save-post" class="btn btn-lg btn-success pull-right" onclick="savePost($(this));return false">
+        Сохранить
+    </button>
+    <div class="anchor"></div>
 </form>
 
 
