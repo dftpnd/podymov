@@ -37,7 +37,7 @@
                     <?php echo $post->id; ?>
                 </td>
                 <td>
-                    <a href="/uploads/<?php echo $post->pdf_file; ?>" class="post_title_link"
+                    <a href="/uploads/<?php echo $post->uploded_pdf->name; ?>" class="post_title_link"
                        title="Передти на страницу публикации">
                         <?php echo $post->title; ?>
                     </a>
