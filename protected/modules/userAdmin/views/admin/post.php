@@ -37,10 +37,12 @@
                     <?php echo $post->id; ?>
                 </td>
                 <td>
-                    <a href="/site/postview/<?php echo $post->id; ?>" class="post_title_link"
+                    <a href="/uploads/<?php echo $post->pdf_file; ?>" class="post_title_link"
                        title="Передти на страницу публикации">
                         <?php echo $post->title; ?>
                     </a>
+
+
                 </td>
                 <td>
                     <?php if ($post->visible == 0): ?>
