@@ -28,12 +28,6 @@
                 Статус
             </th>
             <th>
-                .doc
-            </th>
-            <th>
-                .pdf
-            </th>
-            <th>
 
             </th>
             <th>
@@ -63,20 +57,6 @@
                         <div class="status_green">
                             Публикация видна
                         </div>
-                    <?php endif; ?>
-                </td>
-                <td>
-                    <?php if (empty($post->doc_file)): ?>
-                        &mdash;
-                    <?php else: ?>
-                        <a href="/site/file/<?php echo $post->doc_file; ?>"><?php echo $post->uploded_doc->orig_name; ?></a>
-                    <?php endif; ?>
-                </td>
-                <td>
-                    <?php if (empty($post->pdf_file)): ?>
-                        &mdash;
-                    <?php else: ?>
-                        <a href="/site/file/<?php echo $post->pdf_file; ?>"><?php echo $post->uploded_pdf->orig_name; ?></a>
                     <?php endif; ?>
                 </td>
                 <td>
