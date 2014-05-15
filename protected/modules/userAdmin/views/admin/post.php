@@ -22,9 +22,6 @@
                 Заголовок
             </th>
             <th>
-                Дата публикации
-            </th>
-            <th>
                 Статус
             </th>
             <th>
@@ -44,9 +41,6 @@
                        title="Передти на страницу публикации">
                         <?php echo $post->title; ?>
                     </a>
-                </td>
-                <td>
-                    <?php echo date('d-m-Y', $post->created); ?>
                 </td>
                 <td>
                     <?php if ($post->visible == 0): ?>
