@@ -1,4 +1,4 @@
 podymov
 =======
 
-<a href="podymov.atpp.in">podymov</a>
+<a href="http://podymov.atpp.in">podymov</a>
